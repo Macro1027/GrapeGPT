@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/marcolee/Library/CloudStorage/OneDrive-HarrowInternationalSchoolHongKong/python/personal/projects/in progress/GrapeGPT/venv/bin/python3.11" "$0" "$@"
+'''exec' "/Users/marcolee/Library/CloudStorage/OneDrive-HarrowInternationalSchoolHongKong/python/personal/projects/in progress/GrapeGPT/venv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
