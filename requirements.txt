@@ -13,8 +13,14 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 MarkupSafe==2.1.2
 multidict==6.0.4
+<<<<<<< HEAD
 openai==0.27.7
 requests==2.30.0
+=======
+openai==0.27.4
+python==3.11.2
+requests==2.28.2
+>>>>>>> a506de5e04d8cc6534dd7933b8e38cbb38b295bf
 tqdm==4.65.0
 urllib3==2.0.2
 Werkzeug==2.3.4
