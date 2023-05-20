@@ -1,0 +1,65 @@
+{% extends "routes/base.html" %}
+
+{% block title %}GrapeGPT{% endblock %}
+
+
+{% block content %}
+<div class="container m-0 m-lg-auto" style="padding-bottom: 40px;">
+    <div class="row">
+      <div class="col-12">
+        <div class="main-card mt-5">
+          <div class="row">
+            <div class="col-1">
+              <div class="nav-bar">
+                <button class="btn btn-light mb-2">1</button>
+                <button class="btn btn-light mb-2">2</button>
+                <button class="btn btn-light mb-2">3</button>
+              </div>
+            </div>
+            <div class="col-11">
+              <div class="row">
+                <div class="col-12">
+                  <div class="top-buttons">
+                    <button class="btn btn-primary me-2">Button A</button>
+                    <button class="btn btn-primary me-2">Button B</button>
+                    <button class="btn btn-primary">Button C</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div class="chat-card">
+                    <h5>Chat</h5>
+                    <button class="w-100 my-2 py-3 model-button animated" onclick="showOnly('gptturbo')">gpt-turbo-3.5</button>
+                    <button class="w-100 my-2 py-3 model-button animated" onclick="showOnly('dalle')">DALL-E</button>
+                  </div>
+                </div>
+                <div class="col-9">
+                  <div class="grape-gpt-card">
+                    <h5 id="msgtitle">gpt-turbo-3</h5>
+                        <div class="top-half">
+                            <div class="messages" id="gptturbo">
+                            </div>
+                            <div class="messages" id="dalle" style="display: none;">
+                            </div>
+                        </div>
+                        <div class="border-top border-secondary border-elem"></div>
+                        <div class="bottom-half">
+                            <input type="text" class="message-input" id="text-input" placeholder="Type your message... ">
+                            <button class="sweep-button" onclick="clearContext()">
+                                <img src="{{ url_for('static', filename='images/broom.png')}}" alt="broom-img" class="broom image">
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+

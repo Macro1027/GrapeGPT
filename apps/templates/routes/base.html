@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>{% block title %}GrapeGPT{% endblock %}</title>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <span>
+                <a class="navbar-brand nav-link text-dark" href="{{ url_for('routes.index') }}">Home</a> 
+                <a class="navbar-brand nav-link text-dark" href="{{ url_for('routes.gpt') }}">GrapeGPT</a> 
+                <a class="navbar-brand nav-link text-dark" href="{{ url_for('routes.info') }}">Info</a>
+                <a class="navbar-brand nav-link text-dark" href="{{ url_for('routes.contact') }}">Contact</a>
+            </span>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-white" id="title">GrapeGPT</h1>
+    </div>
+</header>
+
+<body class="chat-container">
+
+    {% block content %}
+    <p>This is the default content.</p>
+    {% endblock %}
+    
+    <footer class="bg-dark text-white py-3 mt-5 footer">
+        <div class="container">
+            <p class="text-center mb-0">Copyright &copy; 2023 - All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
